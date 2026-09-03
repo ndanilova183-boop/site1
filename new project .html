@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Портфолио Пети Иванова</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin: 20px;
+      background-color: #eaf4ff;
+      padding: 50px;
+      border-radius: 24px;
+    }
+
+    h1 {
+      color: #17346b;
+      font-size: 56px;
+      margin: 0;
+    }
+
+    h2 {
+      color: #17346b;
+      font-size: 40px;
+      margin: 30px;
+    }
+
+    p {
+      color: #5b6b88;
+      font-size: 24px;
+      margin: 10px;
+    }
+
+    .project {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 16px;
+      background-color: #fff8de;
+      box-sizing: border-box;
+    }
+
+    .project img {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+
+    iframe {
+      max-width: 500px;
+      width: 100%;
+      height: 281px;
+      border: none;
+      border-radius: 16px;
+    }
+
+    .contacts {
+      background-color: #dcecff;
+      padding: 30px;
+      margin: 20px;
+      border-radius: 16px;
+    }
+
+    .contacts h2 {
+      margin: 0 0 15px 0;
+    }
+
+    .contacts a {
+      text-decoration: none;
+    }
+
+    /* Плавная анимация */
+    img,
+    h1,
+    h2 {
+      transition: transform 0.3s ease;
+    }
+
+    /* Анимация при наведении */
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    h1:hover,
+    h2:hover {
+      transform: scale(1.05);
+    }
+
+    /* Плавное появление блоков */
+    .profile,
+    .project,
+    .contacts {
+      opacity: 0;
+      transform: translateY(25px);
+      animation: appear 0.8s ease forwards;
+    }
+
+    .profile {
+      animation-delay: 0.1s;
+    }
+
+    .project:nth-of-type(2) {
+      animation-delay: 0.3s;
+    }
+
+    .project:nth-of-type(3) {
+      animation-delay: 0.5s;
+    }
+
+    .project:nth-of-type(4) {
+      animation-delay: 0.7s;
+    }
+
+    .contacts {
+      animation-delay: 0.9s;
+    }
+
+    @keyframes appear {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* На маленьком экране блоки становятся вертикальными */
+    @media (max-width: 700px) {
+      .profile,
+      .project {
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+      .profile {
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Профиль -->
+  <div class="profile">
+
+    <img
+      src="https://i.ibb.co/xK6RX5fj/image.png"
+      width="220"
+      height="220"
+    >
+
+    <div>
+      <h1>Петя Иванов</h1>
+      <p>создатель игр и сайтов</p>
+    </div>
+
+  </div>
+
+
+  <!-- Заголовок проектов -->
+  <h2>МОИ ПРОЕКТЫ</h2>
+
+
+  <!-- Первый проект -->
+  <div class="project">
+
+    <img
+      src="https://i.postimg.cc/fypJhfVL/image.png"
+      width="500"
+    >
+
+    <p>МОЯ ИГРА «НАЗВАНИЕ ИГРЫ»</p>
+
+  </div>
+
+
+  <!-- Второй проект -->
+  <div class="project">
+
+    <p>Вот такую обложку я создал</p>
+
+    <img
+      src="https://i.postimg.cc/k577KpRk/image.png"
+      width="500"
+    >
+
+  </div>
+
+
+  <!-- Видео -->
+  <div class="project">
+
+    <p>Посмотри видео, которое я создал к игре</p>
+
+    <iframe
+      src="https://rutube.ru/play/embed/c401c7f3c2551b19ea8d93dbadc6c5f5/"
+      width="500"
+      height="281"
+      allow="autoplay; fullscreen"
+    ></iframe>
+
+  </div>
+
+
+  <!-- Контакты -->
+  <footer class="contacts">
+
+    <h2>Контакты</h2>
+
+    <a href="mailto:ndanilova183@gmail.ru">
+      <p>Связаться со мной</p>
+    </a>
+
+  </footer>
+
+</body>
+</html>
